@@ -132,6 +132,70 @@ body {
 
 
 /* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    background: linear-gradient(135deg, #111827 0%, #1e3a5f 100%);
+    color: white;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.hero-heading {
+    font-size: 52px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+}
+
+.hero-accent {
+    color: #60a5fa;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: #d1d5db;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta {
+    display: inline-block;
+    background: #60a5fa;
+    color: #111827;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 16px 40px;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.hero-cta:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.hero-cta:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
    FOOTER
 ========================= */
 
