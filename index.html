@@ -14,19 +14,26 @@
         <a href="#" class="logo">CREZIA</a>
 
         <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
+
+        <!-- Hamburger button (mobile only) -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
 
     </header>
 
     <main id="main-content">
 
-        <!-- Hero Section -->
+        <!-- ==================== HOME / HERO ==================== -->
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1 class="hero-heading">Build Something <span class="hero-accent">Great</span> Together</h1>
@@ -37,7 +44,155 @@
                 <a href="#projects" class="hero-cta" id="hero-cta-btn">Explore Projects</a>
             </div>
         </section>
-        <!-- End Hero Section -->
+
+        <!-- ==================== ABOUT ==================== -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+
+                <div class="section-header">
+                    <h2 class="section-title">About <span class="accent">Crezia</span></h2>
+                    <p class="section-subtitle">Who we are and what drives us</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            Crezia is a team-built web project created to practice real-world
+                            collaboration using Git and GitHub. Every line of code here was
+                            written by a different contributor, reviewed, and merged — just like
+                            professional teams do it.
+                        </p>
+                        <p>
+                            Our goal is simple: learn by doing. We split features into issues,
+                            create branches, open pull requests, and review each other's work
+                            before anything lands on <code>main</code>.
+                        </p>
+                    </div>
+
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <span class="about-card-icon">🤝</span>
+                            <h3>Collaboration</h3>
+                            <p>Built entirely through pull requests and peer reviews.</p>
+                        </div>
+                        <div class="about-card">
+                            <span class="about-card-icon">🌿</span>
+                            <h3>Git Workflow</h3>
+                            <p>Feature branches, meaningful commits, clean history.</p>
+                        </div>
+                        <div class="about-card">
+                            <span class="about-card-icon">🚀</span>
+                            <h3>Real Skills</h3>
+                            <p>Practising the exact workflow used in the industry.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== PROJECTS ==================== -->
+        <section id="projects" class="projects-section">
+            <div class="section-container">
+
+                <div class="section-header">
+                    <h2 class="section-title">Our <span class="accent">Projects</span></h2>
+                    <p class="section-subtitle">Features built collaboratively by the team</p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <div class="project-card">
+                        <div class="project-card-top">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <h3>Navbar Section</h3>
+                        <p>Responsive sticky navbar with hamburger menu, active link indicator, and scroll-spy.</p>
+                        <a href="https://github.com/Gous13/CollabTest/pull/4" target="_blank" rel="noopener" class="project-link">View PR →</a>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-card-top">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JS</span>
+                        </div>
+                        <h3>Hero Section</h3>
+                        <p>Full-viewport hero with heading, description, and a CTA button linking to projects.</p>
+                        <a href="https://github.com/Gous13/CollabTest/pull/3" target="_blank" rel="noopener" class="project-link">View PR →</a>
+                    </div>
+
+                    <div class="project-card project-card--placeholder">
+                        <div class="project-card-top">
+                            <span class="project-tag project-tag--open">Open</span>
+                        </div>
+                        <h3>Your Feature</h3>
+                        <p>Pick an open issue, create a branch, and add your feature here.</p>
+                        <a href="https://github.com/Gous13/CollabTest/issues" target="_blank" rel="noopener" class="project-link">View Issues →</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==================== CONTACT ==================== -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+
+                <div class="section-header">
+                    <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+                    <p class="section-subtitle">Have an idea or want to contribute? Reach out.</p>
+                </div>
+
+                <div class="contact-grid">
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📁</span>
+                            <div>
+                                <h3>GitHub Repository</h3>
+                                <a href="https://github.com/Gous13/CollabTest" target="_blank" rel="noopener">github.com/Gous13/CollabTest</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🐛</span>
+                            <div>
+                                <h3>Open an Issue</h3>
+                                <a href="https://github.com/Gous13/CollabTest/issues/new" target="_blank" rel="noopener">Report a bug or suggest a feature</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🔀</span>
+                            <div>
+                                <h3>Contribute</h3>
+                                <a href="https://github.com/Gous13/CollabTest/pulls" target="_blank" rel="noopener">Open a Pull Request</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="contact-name">Name</label>
+                            <input type="text" id="contact-name" name="name" placeholder="Your name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="email" placeholder="your@email.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+                        </div>
+                        <button type="submit" class="contact-submit">Send Message</button>
+                        <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
 
     </main>
 
