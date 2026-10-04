@@ -228,6 +228,28 @@ body {
 
 
 /* =========================
+
+.page-banner {
+    background: linear-gradient(135deg, #111827 0%, #1e3a5f 100%);
+    color: white;
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.page-banner-content h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.page-banner-content p {
+    font-size: 17px;
+    color: #d1d5db;
+}
+
+
+/* =========================
    ABOUT SECTION
 ========================= */
 

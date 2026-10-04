@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crezia | About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="navbar">
+
+        <a href="index.html" class="logo">CREZIA</a>
+
+        <nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html"    class="nav-link" data-page="home">Home</a></li>
+                <li><a href="about.html"    class="nav-link" data-page="about">About</a></li>
+                <li><a href="projects.html" class="nav-link" data-page="projects">Projects</a></li>
+                <li><a href="contact.html"  class="nav-link" data-page="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button class="hamburger" id="hamburger-btn"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-links">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+    </header>
+
+    <main id="main-content">
+
+        <!-- Page Banner -->
+        <section class="page-banner">
+            <div class="page-banner-content">
+                <h1>About <span class="hero-accent">Crezia</span></h1>
+                <p>Who we are and what drives us</p>
+            </div>
+        </section>
+
+        <!-- About Content -->
+        <section class="about-section">
+            <div class="section-container">
+
+                <div class="about-grid">
+
+                    <div class="about-text">
+                        <p>
+                            Crezia is a team-built web project created to practice real-world
+                            collaboration using Git and GitHub. Every line of code here was
+                            written by a different contributor, reviewed, and merged — just like
+                            professional teams do it.
+                        </p>
+                        <p>
+                            Our goal is simple: learn by doing. We split features into issues,
+                            create branches, open pull requests, and review each other's work
+                            before anything lands on <code>main</code>.
+                        </p>
+                        <p>
+                            Whether you are a beginner or someone brushing up on team workflows,
+                            Crezia is a safe space to practice, make mistakes, and grow as a
+                            developer.
+                        </p>
+                    </div>
+
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <span class="about-card-icon">🤝</span>
+                            <h3>Collaboration</h3>
+                            <p>Built entirely through pull requests and peer reviews.</p>
+                        </div>
+                        <div class="about-card">
+                            <span class="about-card-icon">🌿</span>
+                            <h3>Git Workflow</h3>
+                            <p>Feature branches, meaningful commits, clean history.</p>
+                        </div>
+                        <div class="about-card">
+                            <span class="about-card-icon">🚀</span>
+                            <h3>Real Skills</h3>
+                            <p>Practising the exact workflow used in the industry.</p>
+                        </div>
+                        <div class="about-card">
+                            <span class="about-card-icon">🧠</span>
+                            <h3>Learn by Doing</h3>
+                            <p>No tutorials — just real issues, branches, and merges.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Team Values -->
+                <div class="values-section">
+                    <h2 class="section-title">Our <span class="accent">Values</span></h2>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <h3>✅ Code Review</h3>
+                            <p>Every change is reviewed before merging. No one works in isolation.</p>
+                        </div>
+                        <div class="value-item">
+                            <h3>📝 Clear Commits</h3>
+                            <p>We write commit messages that explain the why, not just the what.</p>
+                        </div>
+                        <div class="value-item">
+                            <h3>🔒 Protect Main</h3>
+                            <p>The <code>main</code> branch is always deployable. All work happens on feature branches.</p>
+                        </div>
+                        <div class="value-item">
+                            <h3>🌍 Open to All</h3>
+                            <p>Any skill level is welcome. Pick an issue and start contributing.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <p>© 2026 Crezia. All rights reserved.</p>
+        <p>Built collaboratively with Git &amp; GitHub.</p>
+    </footer>
+
+    <script src="script.js" data-page="about"></script>
+</body>
+</html>
