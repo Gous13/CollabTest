@@ -35,7 +35,6 @@ if (hamburgerBtn && navElement) {
 
         const isOpen = navElement.classList.toggle("nav-open");
 
-        // Animate the button into an X and update accessibility state
         hamburgerBtn.classList.toggle("open", isOpen);
         hamburgerBtn.setAttribute("aria-expanded", isOpen);
 
@@ -43,7 +42,7 @@ if (hamburgerBtn && navElement) {
 
     });
 
-    // Close the menu when any nav link is clicked (mobile UX)
+    // Close menu when any nav link is clicked (mobile UX)
     navLinks.forEach(function (link) {
 
         link.addEventListener("click", function () {
@@ -60,7 +59,7 @@ if (hamburgerBtn && navElement) {
 
 
 // =========================
-// ACTIVE LINK — highlight the current section while scrolling
+// ACTIVE LINK — scroll-spy to highlight current section
 // =========================
 
 const sections = document.querySelectorAll("main section[id]");
@@ -71,7 +70,6 @@ function setActiveLink() {
 
     sections.forEach(function (section) {
 
-        // A section is "active" when its top edge is within the top 40% of the viewport
         const sectionTop    = section.getBoundingClientRect().top;
         const triggerOffset = window.innerHeight * 0.4;
 
@@ -95,10 +93,7 @@ function setActiveLink() {
 
 }
 
-// Run on scroll with passive flag for performance
 window.addEventListener("scroll", setActiveLink, { passive: true });
-
-// Run once on page load to set initial active state
 setActiveLink();
 
 
@@ -113,6 +108,49 @@ if (heroCtaBtn) {
     heroCtaBtn.addEventListener("click", function () {
 
         console.log("CTA clicked: navigating to Projects section.");
+
+    });
+
+}
+
+
+// =========================
+// CONTACT FORM — validation and submit feedback
+// =========================
+
+const contactForm = document.getElementById("contact-form");
+const formFeedback = document.getElementById("form-feedback");
+
+if (contactForm && formFeedback) {
+
+    contactForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const name    = contactForm.name.value.trim();
+        const email   = contactForm.email.value.trim();
+        const message = contactForm.message.value.trim();
+
+        // Validate fields
+        if (!name || !email || !message) {
+            formFeedback.textContent = "Please fill in all fields.";
+            formFeedback.className   = "form-feedback error";
+            return;
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            formFeedback.textContent = "Please enter a valid email address.";
+            formFeedback.className   = "form-feedback error";
+            return;
+        }
+
+        // Success (no backend — UI feedback only)
+        formFeedback.textContent = "Thanks for your message! We'll get back to you soon.";
+        formFeedback.className   = "form-feedback success";
+        contactForm.reset();
+
+        console.log("Contact form submitted:", { name, email, message });
 
     });
 
