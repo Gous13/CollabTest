@@ -17,3 +17,17 @@ navLinks.forEach(function (link) {
     });
 
 });
+
+
+// Hero CTA button
+const heroCtaBtn = document.getElementById("hero-cta-btn");
+
+if (heroCtaBtn) {
+
+    heroCtaBtn.addEventListener("click", function (e) {
+
+        console.log("CTA clicked: navigating to Projects section.");
+
+    });
+
+}
